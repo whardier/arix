@@ -5,6 +5,9 @@ description = "Asterisk ARI WebSocket/Callback Service"
 authors = ["Shane R. Spencer <spencersr@gmail.com>"]
 license = "MIT"
 
+[tool.poetry.scripts]
+arix = 'arix:main'
+
 [tool.poetry.dependencies]
 python = "^3.8"
 appdirs = "^1.4.4"

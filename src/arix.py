@@ -88,7 +88,14 @@ class AriClient:
                             f"{message_type}: {message_timestamp}: {message_eventname}"
                         )
 
-            await http_client.fetch(options.callback_url, method="POST", body=message)
+            try:
+                await http_client.fetch(
+                    options.callback_url, method="POST", body=message
+                )
+            except Exception:
+                gen_log.error("Error connecting to ARI WebSocket", exc_info=True)
+                io_loop.stop()
+                return
 
 
 async def do_ping():

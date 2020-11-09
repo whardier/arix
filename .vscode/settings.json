@@ -1,0 +1,23 @@
+{
+    "editor.rulers": [
+        72,
+        88
+    ],
+    "files.exclude": {
+        "**/*.egg-info": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.venv": true,
+        "**/__pycache__": true
+    },
+    "files.watcherExclude": {
+        "**/.venv": true,
+        "**/__pycache__": true
+    },
+    "python.formatting.provider": "black",
+    "python.linting.banditEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.pythonPath": ".venv/bin/python3.8"
+}
+
